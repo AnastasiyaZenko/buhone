@@ -1,0 +1,7 @@
+mixin footer(obj = {})
+    -
+        obj = {...{
+            tag: 'footer',
+        }, ...obj}
+    #{obj.tag}.footer&attributes(attributes)
+        .container

@@ -1,0 +1,7 @@
+mixin header(obj = {})
+    -
+        obj = {...{
+            tag: 'header',
+        }, ...obj}
+    #{obj.tag}.header&attributes(attributes)
+        .container
