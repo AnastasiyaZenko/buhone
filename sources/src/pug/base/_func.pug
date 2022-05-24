@@ -1,2 +1,2 @@
 -
-    const text = (arr, param = {tag: 'p'}) => arr.map(text => `<${param.tag}>${text}</${param.tag}>`).join('')
+    const createArrayTag = (arr, tag) => arr.map(text => `<${tag}>${text}</${tag}>`).join('')

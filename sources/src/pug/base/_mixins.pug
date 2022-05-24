@@ -1,6 +1,5 @@
 mixin picture(name = false, obj = {})
     -
-        var a = attributes
         var src = obj.src == undefined ? './images/' : obj.src
         var type = obj.type == undefined ? ['jpg', 'webp'] : [obj.type, 'webp']
         var img = name
@@ -9,7 +8,7 @@ mixin picture(name = false, obj = {})
         var mobileWidth = obj.mobileWidth == undefined ? '575' : obj.mobileWidth
     
     if img
-        picture&attributes(a)
+        picture&attributes(attributes)
             -
                 var index = 1
                 var webpSrcset = ''

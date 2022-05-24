@@ -228,7 +228,4 @@ gulp
 Путь к библиотекам прописывается в ```sources/src/js/_libs_concat.cjs```.
 При сборке все JS сливаются в один файл ```html/js/main.min.js``` он и подключен в pug ```sources/src/pug/base/_layout.pug```.
 
-
-## Вопросы, замечания, предложения?
-
-Пишите нам!
+## [СНИППЕТЫ](https://github.com/NikitaPalmDev/NF-gulp-template/blob/main/SNIPPETS.md)
