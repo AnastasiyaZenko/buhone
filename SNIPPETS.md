@@ -1,64 +1,57 @@
 # snippets
+
 ### jade / pug
+
 ```json
 {
-	"New block":  {
-		"prefix":  "nb",
-		"body":  [
-			"mixin $1(obj = {})",
-			"\t-",
-			"\t\tobj = {",
-			"\t\t\ttag: 'section',",
-			"\t\t\t...obj",
-			"\t\t}",
-			"\t#{obj.tag}.$1&attributes(attributes)",
-		],
-		"description":  "Create a template for a new pug mixin/block"
-	}
+    "New block": {
+        "prefix": "nb",
+        "body": [
+            "mixin $1(obj = {})",
+            "\t-",
+            "\t\tobj = {",
+            "\t\t\ttag: 'section',",
+            "\t\t\t...obj",
+            "\t\t}",
+            "\t#{obj.tag}.$1&attributes(attributes)"
+        ],
+        "description": "Create a template for a new pug mixin/block"
+    }
 }
 ```
+
 ### sass
+
 ```json
 {
-	"Hover Media": {
+    "Hover Media": {
         "prefix": "hm",
-        "body": [
-            "&:hover",
-            "\t@media (min-width: $$sm)",
-            "\t\t$1"
-        ],
+        "body": ["&:hover", "\t@media (min-width: $$sm)", "\t\t$1"],
         "description": "Create a hover with a media query"
     },
-	"Transition": {
-		"prefix": "t",
-        "body": [
-            "transition: .3s ease-in-out",
-            "transition-property: $1",
-        ],
+    "Transition": {
+        "prefix": "t",
+        "body": ["transition: .3s ease-in-out", "transition-property: $1"],
         "description": "Create a transition"
-	},
-	"Not Last Child": {
-		"prefix": "nlc",
-        "body": [
-            "&:not(:last-child)",
-            "\t$1",
-        ],
+    },
+    "Not Last Child": {
+        "prefix": "nlc",
+        "body": ["&:not(:last-child)", "\t$1"],
         "description": "Not Last Child"
-	},
-	"Not First Child": {
-		"prefix": "nfc",
-        "body": [
-            "&:not(:first-child)",
-            "\t$1",
-        ],
+    },
+    "Not First Child": {
+        "prefix": "nfc",
+        "body": ["&:not(:first-child)", "\t$1"],
         "description": "Not First Child"
-	}
+    }
 }
 ```
+
 ### JavaScript
+
 ```json
 {
-	"Class": {
+    "Class": {
         "prefix": "cc",
         "body": [
             "class $1 {",
@@ -76,34 +69,36 @@
             "\t\t\tthrow new Error(error)",
             "\t\t}",
             "\t}",
-            "}",
+            "}"
         ],
         "description": "Create a class by NF"
     }
 }
 ```
+
 ### svelte
+
 ```json
 {
-	"New component": {
-       "prefix": "s-new-component",
-       "body": [
-           "<script lang='ts'>",
-           "\tlet className:string = ''",
-           "\texport { className as class }",
-           "\t// your script goes here",
-           "</script>",
-           "",
-           "<template lang='pug'>",
-           "\t",
-           "</template>",
-           "",
-           "<!-- svelte-ignore css-unused-selector -->",
-           "<style lang='sass'>",
-           "\t/* your styles go here */",
-           "</style>",
-       ],
-       "description": "Create a template for a new svelte component"
-   }
+    "New component": {
+        "prefix": "s-new-component",
+        "body": [
+            "<script lang='ts'>",
+            "\tlet className:string = ''",
+            "\texport { className as class }",
+            "\t// your script goes here",
+            "</script>",
+            "",
+            "<template lang='pug'>",
+            "\t",
+            "</template>",
+            "",
+            "<!-- svelte-ignore css-unused-selector -->",
+            "<style lang='sass'>",
+            "\t/* your styles go here */",
+            "</style>"
+        ],
+        "description": "Create a template for a new svelte component"
+    }
 }
- ```
+```
