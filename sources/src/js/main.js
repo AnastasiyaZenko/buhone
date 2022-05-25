@@ -17,4 +17,4 @@ function declOfNum(number, titles) {
     ];
 };
 
-const pageManagement = new Page(document.querySelector('body'))
+const pageManager = new Page(document.querySelector('body'))
