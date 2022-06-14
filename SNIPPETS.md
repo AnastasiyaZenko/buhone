@@ -4,16 +4,16 @@
 
 ```json
 {
-    "New block": {
+	"New block": {
         "prefix": "nb",
         "body": [
-            "mixin $1(obj = {})",
+            "mixin ${TM_FILENAME_BASE}(obj = {})",
             "\t-",
             "\t\tobj = {",
-            "\t\t\ttag: 'section',",
+            "\t\t\ttag: '${1:section}',",
             "\t\t\t...obj",
-            "\t\t}",
-            "\t#{obj.tag}.$1&attributes(attributes)"
+			"\t\t}",
+            "\t#{obj.tag}.${TM_FILENAME_BASE}&attributes(attributes)",
         ],
         "description": "Create a template for a new pug mixin/block"
     }
@@ -86,17 +86,19 @@
             "<script lang='ts'>",
             "\tlet className:string = ''",
             "\texport { className as class }",
-            "\t// your script goes here",
+            "\t",
             "</script>",
             "",
             "<template lang='pug'>",
-            "\t",
+            "\t.${TM_FILENAME_BASE}(",
+            "\t\tclass='{className}'",
+            "\t)",
             "</template>",
             "",
             "<!-- svelte-ignore css-unused-selector -->",
             "<style lang='sass'>",
-            "\t/* your styles go here */",
-            "</style>"
+            "\t.${TM_FILENAME_BASE}",
+            "</style>",
         ],
         "description": "Create a template for a new svelte component"
     }
