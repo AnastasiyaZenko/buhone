@@ -4,7 +4,7 @@
 
 ```json
 {
-	"New block": {
+    "New block": {
         "prefix": "nb",
         "body": [
             "mixin ${TM_FILENAME_BASE}(obj = {})",
@@ -12,7 +12,7 @@
             "\t\tobj = {",
             "\t\t\ttag: '${1:section}',",
             "\t\t\t...obj",
-			"\t\t}",
+            "\t\t}",
             "\t#{obj.tag}.${TM_FILENAME_BASE}&attributes(attributes)",
         ],
         "description": "Create a template for a new pug mixin/block"
