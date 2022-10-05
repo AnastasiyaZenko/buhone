@@ -1,0 +1,25 @@
+mixin contact-form(obj = {})
+    -
+        obj = {
+            tag: 'form',
+            ...obj
+        }
+    #{obj.tag}.contact-form&attributes(attributes)
+        .contact-form__row
+            +input({
+                label: 'Имя',
+                placeholder: 'Иван'
+            })
+            +input({
+                label: 'Фамилия',
+                placeholder: 'Иванов'
+            })
+        +input({
+            label: 'Сообщение',
+            textarea: true,
+            placeholder: 'Ваше сообщение'
+        }).contact-form__message
+        +btn({
+            text: 'Отправить сообщение',
+            size: 'm'
+        }).contact-form__button

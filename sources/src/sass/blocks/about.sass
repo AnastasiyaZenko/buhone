@@ -1,0 +1,21 @@
+.about
+    .container
+        display: flex
+        justify-content: space-between
+        @media (max-width: $lg)
+            flex-direction: column
+    &__statistics
+        flex: none
+        @media (max-width: $lg)
+            margin-top: 60px
+    &__info
+        max-width: 445px
+        margin-right: 125px
+        @media (max-width: $lg)
+            max-width: none
+            margin-right: 0
+        .info-block
+            max-width: 347px
+        p
+            margin-top: 60px
+

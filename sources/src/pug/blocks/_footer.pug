@@ -2,6 +2,43 @@ mixin footer(obj = {})
     -
         obj = {...{
             tag: 'footer',
+            img: 'banner',
+            contacts: [
+                {
+                    href: 'tel:+7 (111) 222-33-44',
+                    text: '+7 (111) 222-33-44',
+                    ico: 'phone-w'
+                },
+                {
+                    href: 'mailto:order@buhone.ru',
+                    text: 'order@buhone.ru',
+                    ico: 'mail-w'
+                },
+            ],
         }, ...obj}
     #{obj.tag}.footer&attributes(attributes)
-        .container
+        .footer__main
+            +picture(obj.img).bg-image
+            .container
+                .footer__main-info
+                    h2 
+                        |Связь с нами
+                    p
+                        |У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!
+                    ul.footer__main-info-contacts 
+                        each item in obj.contacts
+                            li
+                                if item.ico
+                                    +icon(item.ico)
+                                if item.href
+                                    a(href=item.href) !{item.text}
+                                else
+                                    | !{item.text}
+                +contact-form
+        .footer__underline 
+            .container
+                span 
+                    |2019 (с) Все права защищены. БухОне.ру
+                span 
+                    |Разработано: BuhOne
+        

@@ -1,0 +1,11 @@
+mixin info-block(obj = {})
+    -
+        obj = {
+            tag: 'div',
+            subTitle: '',
+            title: '',
+            ...obj
+        }
+    #{obj.tag}.info-block&attributes(attributes)
+        span.h3.info-block__sub-title.h3 !{obj.subTitle}
+        h2.info-block__title.h2 !{obj.title}

@@ -1,0 +1,17 @@
+mixin banner(obj = {})
+    -
+        obj = {
+            tag: 'section',
+            img: 'banner',
+            title: 'Бухгалтерские услуги в Санкт-Петербурге',
+            btn: 'Наша презентация',
+            ...obj
+        }
+    #{obj.tag}.banner&attributes(attributes)
+         +picture(obj.img).bg-image
+         .container
+            h2 !{obj.title}
+            +btn({
+                text: obj.btn,
+            })
+            +slider-nav-row

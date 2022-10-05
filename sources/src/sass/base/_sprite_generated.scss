@@ -1,213 +1,214 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@use 'sass:math';
+
+%svg-common {
+	background: url("../images/sprites/main.svg") no-repeat;
+}
+
+.svg-image-arrow {
+	@extend %svg-common;
+	background-position: 77.19298245614036% 60.37735849056604%;
+	background-size: math.div(74, 17)*100% auto;
+	width: 17px;
+
+}
+@mixin svg-pos-image-arrow {
+	background-position: 77.19298245614036% 60.37735849056604%;
+}
+@mixin svg-image-arrow-hover {
+	.svg-image-arrow {
+		@include svg-pos-image-arrow-hover
+	}
+}
+
+.svg-image-arrow:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(17, 17)*100%;
+}
+
+.svg-image-arrow-dims {
+	width: 17px;
+	height: 17px;
+}
+
+.svg-image-mail {
+	@extend %svg-common;
+	background-position: 0 62.745098039215684%;
+	background-size: math.div(74, 25)*100% auto;
+	width: 25px;
+
+}
+@mixin svg-pos-image-mail {
+	background-position: 0 62.745098039215684%;
+}
+@mixin svg-image-mail-hover {
+	.svg-image-mail {
+		@include svg-pos-image-mail-hover
+	}
+}
+
+.svg-image-mail:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(19, 25)*100%;
+}
+
+.svg-image-mail-dims {
+	width: 25px;
+	height: 19px;
+}
+
+.svg-image-mail-w {
+	@extend %svg-common;
+	background-position: 0 0;
+	background-size: math.div(74, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-mail-w {
+	background-position: 0 0;
+}
+@mixin svg-image-mail-w-hover {
+	.svg-image-mail-w {
+		@include svg-pos-image-mail-w-hover
+	}
+}
+
+.svg-image-mail-w:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(32, 42)*100%;
+}
+
+.svg-image-mail-w-dims {
+	width: 42px;
+	height: 32px;
+}
+
+.svg-image-phone {
+	@extend %svg-common;
+	background-position: 100% 0;
+	background-size: math.div(74, 12)*100% auto;
+	width: 12px;
+
+}
+@mixin svg-pos-image-phone {
+	background-position: 100% 0;
+}
+@mixin svg-image-phone-hover {
+	.svg-image-phone {
+		@include svg-pos-image-phone-hover
+	}
+}
+
+.svg-image-phone:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(20, 12)*100%;
+}
+
+.svg-image-phone-dims {
+	width: 12px;
+	height: 20px;
+}
+
+.svg-image-phone-w {
+	@extend %svg-common;
+	background-position: 77.77777777777777% 0;
+	background-size: math.div(74, 20)*100% auto;
+	width: 20px;
+
+}
+@mixin svg-pos-image-phone-w {
+	background-position: 77.77777777777777% 0;
+}
+@mixin svg-image-phone-w-hover {
+	.svg-image-phone-w {
+		@include svg-pos-image-phone-w-hover
+	}
+}
+
+.svg-image-phone-w:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(32, 20)*100%;
+}
+
+.svg-image-phone-w-dims {
+	width: 20px;
+	height: 32px;
+}
+
+.svg-image-placeholder {
+	@extend %svg-common;
+	background-position: 45.45454545454545% 62.745098039215684%;
+	background-size: math.div(74, 19)*100% auto;
+	width: 19px;
+
+}
+@mixin svg-pos-image-placeholder {
+	background-position: 45.45454545454545% 62.745098039215684%;
+}
+@mixin svg-image-placeholder-hover {
+	.svg-image-placeholder {
+		@include svg-pos-image-placeholder-hover
+	}
+}
+
+.svg-image-placeholder:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(19, 19)*100%;
+}
+
+.svg-image-placeholder-dims {
+	width: 19px;
+	height: 19px;
+}
+
+.svg-image-watch {
+	@extend %svg-common;
+	background-position: 0 100%;
+	background-size: math.div(74, 19)*100% auto;
+	width: 19px;
+
+}
+@mixin svg-pos-image-watch {
+	background-position: 0 100%;
+}
+@mixin svg-image-watch-hover {
+	.svg-image-watch {
+		@include svg-pos-image-watch-hover
+	}
+}
+
+.svg-image-watch:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(19, 19)*100%;
+}
+
+.svg-image-watch-dims {
+	width: 19px;
+	height: 19px;
+}
+
+
+.image-by-height { width:auto; }
+.image-by-height:before { content:none; }
+.image-by-height > svg { height: inherit; }
+.image-by-height > img { height: inherit !important; vertical-align: top !important; margin: 0 !important; padding: 0 !important; max-width: none !important; max-height: none !important; border: 0 !important; opacity: 0 !important; }

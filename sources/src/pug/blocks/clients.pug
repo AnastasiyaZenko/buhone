@@ -1,0 +1,21 @@
+mixin clients(obj = {})
+    -
+        obj = {
+            tag: 'section',
+            subTitle: 'Наши клиенты',
+            title: 'С нами работают',
+            img: 'microsoft',
+            ...obj
+        }
+    #{obj.tag}.clients&attributes(attributes)
+        .container
+            +info-block({
+                subTitle: obj.subTitle,
+                title: obj.title
+            })
+            .clients__list 
+                +picture(obj.img)
+                +picture(obj.img)
+                +picture(obj.img)
+                +picture(obj.img)
+            +slider-nav-row.slider_blue

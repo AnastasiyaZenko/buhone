@@ -1,0 +1,35 @@
+.reviews
+    &__card
+        margin-top: 80px
+        @media (max-width: $md)
+           margin-top: 60px 
+        display: flex
+        background: var(--gray)
+        padding: 45px 95px
+        @media (max-width: $md)
+           padding: 35px 70px
+        @media (max-width: $sm)
+           padding: 30px 50px
+        flex-direction: column
+        p
+            font-weight: 400
+            font-size: 18px
+        &-user
+            display: flex
+            margin-top: 58px
+            @media (max-width: $md)
+                margin-top: 45px 
+            align-items: center
+            img
+                border-radius: 100px
+                width: 80px
+                height: 80px
+            &-info
+                margin-left: 35px
+                span
+                    font-weight: 400
+                    font-size: 14px
+    .slider-nav-row
+        margin-top: 100px
+        @media (max-width: $md)
+           margin-top: 70px 

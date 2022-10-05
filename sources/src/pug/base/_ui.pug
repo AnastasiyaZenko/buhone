@@ -1,0 +1,31 @@
+mixin btn(obj = {})
+    -
+        obj = {
+            tag: 'button',
+            text: 'button',
+            link: '#',
+            size: '',
+            ...obj
+        }
+    #{obj.tag}.btn(
+        class=(obj.size ? `btn_size-${obj.size}` : null)
+    )&attributes(attributes) !{obj.text}
+
+mixin slider-nav-row(obj = {})
+    -
+        obj = {
+            tag: 'div',
+            arrowIco: 'arrow',
+            ...obj
+        }
+    #{obj.tag}.slider-nav-row&attributes(attributes)
+        .slider-pagination
+            span 
+            span 
+            span 
+            span
+        .slider-nav
+            button
+                +icon(obj.arrowIco)   
+            button 
+                +icon(obj.arrowIco)  

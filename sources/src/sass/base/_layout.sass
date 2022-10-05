@@ -36,7 +36,7 @@ body
     overflow-x: hidden
     display: flex
     flex-direction: column
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Lato', sans-serif
     width: 100%
     height: 100%
     min-height: 100vh
@@ -52,8 +52,28 @@ section
 
 h1, h2, h3, h4, h5, h6
     font-weight: 700
+h2, .h2
+    font-family: 'Merriweather'
+    font-weight: 900
+    font-size: 48px
+    @media (max-width: $sm)
+        font-size: 36px
+
+h3, .h3
+    font-weight: 600
+    font-size: 24px
+
+h4, .h4
+    font-weight: 900
+    font-size: 18px
+    @media (max-width: $sm)
+        font-size: 16px
+
+p
+    font-size: 18px
 
 a
+    color: inherit
     text-decoration: none
 
 blockquote, q
@@ -78,6 +98,7 @@ picture, img
     object-fit: cover
 picture
     img
+        height: 100%
         width: 100%
 
 button
@@ -101,7 +122,7 @@ input[type=text]::-ms-reveal
 
 .container
     width: 100%
-    max-width: 1540px
+    max-width: 1100px
     padding: 0 20px
     margin: 0 auto
 
@@ -121,3 +142,27 @@ input[type=text]::-ms-reveal
 .icon
     display: block
     flex: none
+
+.bg-image
+    position: absolute
+    z-index: -2
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    object-fit: cover
+    display: block
+
+.bg-section
+    background: var(--gray)
+
+.pt-140
+    padding: 140px 0
+    @media (max-width: $lg)
+        padding: 100px 0
+    @media (max-width: $sm)
+        padding: 70px 0
+.pt-100
+    padding: 100px 0
+    @media (max-width: $sm)
+        padding: 80px 0

@@ -1,0 +1,29 @@
+mixin card(obj = {})
+    -
+        obj = {
+            tag: 'a',
+            title: '',
+            bg: '',
+            ...obj
+        }
+    #{obj.tag}.card&attributes(attributes)
+        +picture(obj.bg).bg-image
+        h3 !{obj.title}
+
+mixin card-list(obj = {})
+    -
+        obj = {
+            tag: 'div',
+            cards: [
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+                {title: 'Бухгалтерское обслуживание', bg: 'services'},
+            ],
+            ...obj
+        }
+    #{obj.tag}.card-list&attributes(attributes)
+        each card in obj.cards
+            +card(card)

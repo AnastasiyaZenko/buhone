@@ -1,0 +1,49 @@
+mixin statistic-card(obj = {})
+    -
+        obj = {
+            tag: 'li',
+            title: '',
+            desc: '',
+            link: '',
+            theme: '',
+            ...obj
+        }
+    #{obj.tag}.statistic-card(
+        class=(obj.theme ? `statistic-card_${obj.theme}` : false)
+    )&attributes(attributes)
+        h3 !{obj.title}
+        p !{obj.desc}
+        a(href="#") !{obj.link} 
+
+mixin statistic-card-list(obj = {})
+    -
+        obj = {
+            tag: 'ul',
+            cards: [
+                {
+                    title: '90',
+                    desc: 'Завершено крупных сделок',
+                    link: 'Все кейсы',
+                },
+                {
+                    title: '90',
+                    desc: 'Завершено крупных сделок',
+                    link: 'Все кейсы',
+                },
+                {
+                    title: '90',
+                    desc: 'Завершено крупных сделок',
+                    link: 'Все кейсы',
+                },
+                {
+                    title: '90',
+                    desc: 'Завершено крупных сделок',
+                    link: 'Все кейсы',
+                    theme: 'blue',
+                },
+            ],
+            ...obj
+        }
+    #{obj.tag}.statistic-card-list&attributes(attributes)
+        each card in obj.cards
+            +statistic-card(card)

@@ -1,0 +1,26 @@
+mixin reviews(obj = {})
+    -
+        obj = {
+            tag: 'section',
+            subTitle: 'Отзывы',
+            title: 'Ваши благодарности',
+            userImg: 'user',
+            ...obj
+        }
+    #{obj.tag}.reviews&attributes(attributes)
+        .container
+            +info-block({
+                subTitle: obj.subTitle,
+                title: obj.title
+            })
+            .reviews__card 
+                p 
+                   |Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+                .reviews__card-user 
+                    +picture(obj.userImg)
+                    .reviews__card-user-info 
+                        h4 
+                            |Екатерина Иванова
+                        span 
+                            |Директор ООО “Раз-два”
+            +slider-nav-row.slider_blue

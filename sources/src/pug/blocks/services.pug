@@ -1,0 +1,16 @@
+mixin services(obj = {})
+    -
+        obj = {
+            tag: 'section',
+            subTitle: 'Наши услуги',
+            title: 'Мы специализируемся',
+            ...obj
+        }
+    #{obj.tag}.services&attributes(attributes)
+        .container
+            +info-block({
+                subTitle: obj.subTitle,
+                title: obj.title
+            })
+            +card-list()
+            

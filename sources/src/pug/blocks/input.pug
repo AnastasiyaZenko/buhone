@@ -1,0 +1,22 @@
+mixin input(obj = {})
+    -
+        obj = {
+            tag: 'label',
+            textarea: false,
+            label: '',
+            type: 'text',
+            placeholder: '',
+            ...obj
+        }
+    #{obj.tag}.input&attributes(attributes)
+        if obj.label
+            span !{obj.label}
+        if obj.textarea
+            textarea(
+                placeholder=obj.placeholder
+            )
+        else
+            input(
+                type=obj.type
+                placeholder=obj.placeholder
+            )

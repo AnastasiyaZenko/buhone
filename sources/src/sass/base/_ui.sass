@@ -1,0 +1,78 @@
+.btn
+    display: flex
+    border: none
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 21px 56px
+    background: var(--blue)
+    color: #fff
+    font-weight: 400
+    font-size: 18px
+    &_size
+        &-m
+            padding: 19px 38px
+    @media (max-width: $sm)
+        padding: 15px 40px
+        font-size: 14px
+.slider
+    &-pagination
+        display: flex
+        align-items: center
+        & >
+            span
+                cursor: pointer
+                display: block
+                width: 10px
+                height: 10px
+                background: #fff
+                opacity: 0.4
+                border-radius: 50%
+                transition: .3s ease-in-out
+                transition-property: opacity
+                &:not(:last-child)
+                    margin-right: 40px
+                &:hover
+                    opacity: 1
+                @media (max-width: $sm)
+                    &:not(:last-child)
+                        margin-right: 30px
+    &-nav
+        display: flex
+        button
+            flex: none
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 60px
+            height: 60px
+            background: rgba(255,255,255, 0.2)
+            border: none
+            transition: .3s ease-in-out
+            transition-property: background
+            &:last-child
+                span
+                    transform: scaleX(-1)
+            &:hover
+                background: rgba(255,255,255, 0.4)
+            span
+                display: block
+                width: 15px
+            @media (max-width: $sm)
+                width: 50px
+                height: 50px
+    &-nav-row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+    &_blue
+        .slider
+            &-nav
+                button
+                    background: rgba(0,95,163, 0.2)
+                    &:hover
+                        background: rgba(0,95,163)
+            &-pagination
+                span
+                    background: var(--blue)
